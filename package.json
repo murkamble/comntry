@@ -1,0 +1,39 @@
+{
+  "name": "ecommerce-website-baazar",
+  "version": "3.0.0",
+  "description": "This is Ecommerce Website Baazar Clone.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client_admin" : "cd client_admin && npm start",
+    "client" : "cd client && npm start",
+    "server": "nodemon src/index.server.js",
+    "start": "concurrently -n 'server,client_admin,client' -c 'green,yellow,blue' \" npm run server \"  \" npm run client_admin \"  \" npm run client \" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cse-mkamble/ecommerce-website-baazar.git"
+  },
+  "keywords": [
+    "ecommerce",
+    "mern",
+    "project",
+    "backend-api",
+    "api"
+  ],
+  "author": "Mayur Kamble",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cse-mkamble/ecommerce-website-baazar/issues"
+  },
+  "homepage": "https://github.com/cse-mkamble/ecommerce-website-baazar#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "concurrently": "^6.0.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.10.1",
+    "mongoose": "^5.12.5",
+    "nodemon": "^2.0.7"
+  }
+}
