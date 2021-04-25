@@ -29,10 +29,12 @@ mongoose.connect(
 // });
 
 // routes
-const userRoutes = require('./routes/user');
+const authRoutes = require('./routes/auth');
+const adminAuthRoutes = require('./routes/admin/auth');
 
 // API
-app.use('/api', userRoutes);
+app.use('/api', authRoutes);
+app.use('/api', adminAuthRoutes);
 
 
 app.listen(process.env.PORT, () => {
