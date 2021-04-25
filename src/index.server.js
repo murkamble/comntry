@@ -4,10 +4,11 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
 
-//environment variable or you can say constants
+// environment variable or you can say constants
 const app = express();
-app.use(bodyParser());
 env.config();
+// app.use(bodyParser());
+app.use(express.json());
 
 // mongoose Databases connection string
 mongoose.connect(
